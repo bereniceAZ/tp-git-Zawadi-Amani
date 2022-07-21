@@ -1,7 +1,23 @@
-#!/bin/env python
+#!/usr/bin/env python
 
-a=input("inserez un premier nombre")
 
-b=("inserez le deuxieme nombre")
+import sys
 
-print(a,b)
+def add(a,b):
+    return(a+b)
+
+
+def main():
+    arg=len(sys.argv)-1
+    if (arg < 2):
+        print("Error")
+        x = int(sys.argv[1])
+        y = int(input("Enter another values : "))
+        print (add(x,y))
+
+    else:
+        x= int(sys.argv[1])
+        y= int(sys.argv[2])
+        print (add(x,y))
+
+main()
